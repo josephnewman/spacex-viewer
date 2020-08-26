@@ -6,25 +6,29 @@ import { SpacecraftFetch, DragonFeed, RocketFeed } from '../../components';
 function Spacecraft() {
   const [selected, setSelected] = useState(spacecraftTypes.ROCKET);
 
-  var rocketClasses = classNames({
-    button: true,
-    'is-link': selected !== spacecraftTypes.ROCKET,
-    'is-primary': selected === spacecraftTypes.ROCKET,
-  });
-
-  var dragonClasses = classNames({
-    button: true,
-    'is-link': selected !== spacecraftTypes.DRAGON,
-    'is-primary': selected === spacecraftTypes.DRAGON,
-  });
+  const getButtonClasses = (spacecraftType) => {
+    return classNames({
+      button: true,
+      'is-link': selected !== spacecraftType,
+      'is-primary': selected === spacecraftType,
+    });
+  };
 
   return (
     <div data-qa="spacecraft" className="container">
       <div className="buttons">
-        <button data-qa="rockets-button" onClick={() => setSelected(spacecraftTypes.ROCKET)} className={rocketClasses}>
+        <button
+          data-qa="rockets-button"
+          onClick={() => setSelected(spacecraftTypes.ROCKET)}
+          className={getButtonClasses(spacecraftTypes.ROCKET)}
+        >
           Rockets
         </button>
-        <button data-qa="dragons-button" onClick={() => setSelected(spacecraftTypes.DRAGON)} className={dragonClasses}>
+        <button
+          data-qa="dragons-button"
+          onClick={() => setSelected(spacecraftTypes.DRAGON)}
+          className={getButtonClasses(spacecraftTypes.DRAGON)}
+        >
           Dragons
         </button>
       </div>
