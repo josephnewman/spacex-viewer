@@ -1,9 +1,9 @@
 import React from 'react';
-import { Card } from '../Card';
+import { Card } from '../../Card';
 
-export function RocketViewer({ rockets }) {
+export function RocketFeed({ rockets }) {
   return (
-    <div data-qa="rocket-viewer" className="rocket-viewer">
+    <div data-qa="rocket-feed" className="rocket-feed">
       <h1 className="title">
         <span className="mx-2" role="img" aria-label="rocket">
           🚀

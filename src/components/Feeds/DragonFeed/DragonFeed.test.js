@@ -1,9 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { DragonViewer } from './DragonViewer';
-import axe from '../../axe.js';
+import { DragonFeed } from './DragonFeed';
+import axe from '../../../axe.js';
 
-describe('DragonViewer', () => {
+describe('DragonFeed', () => {
   const mockDragons = [
     {
       id: 1,
@@ -26,11 +26,11 @@ describe('DragonViewer', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = mount(<DragonViewer dragons={mockDragons} />);
+    wrapper = mount(<DragonFeed dragons={mockDragons} />);
   });
 
-  test('renders basic dragon viewer', () => {
-    expect(wrapper.find('[data-qa="modal-button"]').exists()).toBe(true);
+  test('renders basic dragon feed', () => {
+    expect(wrapper.find('[data-qa="dragon-feed"]').exists()).toBe(true);
   });
 
   test('should have no accessibility issues', async () => {

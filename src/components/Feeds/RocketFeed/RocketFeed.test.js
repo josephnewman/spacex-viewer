@@ -1,9 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { RocketViewer } from './RocketViewer';
-import axe from '../../axe.js';
+import { RocketFeed } from './RocketFeed';
+import axe from '../../../axe.js';
 
-describe('RocketViewer', () => {
+describe('RocketFeed', () => {
   const mockRockets = [
     {
       id: 1,
@@ -30,11 +30,11 @@ describe('RocketViewer', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = mount(<RocketViewer rockets={mockRockets} />);
+    wrapper = mount(<RocketFeed rockets={mockRockets} />);
   });
 
-  test('renders basic dragon viewer', () => {
-    expect(wrapper.find('[data-qa="rocket-viewer"]').exists()).toBe(true);
+  test('renders basic rocket feed', () => {
+    expect(wrapper.find('[data-qa="rocket-feed"]').exists()).toBe(true);
   });
 
   test('should have no accessibility issues', async () => {

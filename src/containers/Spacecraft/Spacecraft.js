@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import { spacecraftTypes } from '../../constants';
-import { SpacecraftFetch, DragonViewer, RocketViewer } from '../../components';
+import { SpacecraftFetch, DragonFeed, RocketFeed } from '../../components';
 
 function Spacecraft() {
   const [selected, setSelected] = useState(spacecraftTypes.ROCKET);
@@ -30,10 +30,10 @@ function Spacecraft() {
       </div>
       <div>
         {selected === spacecraftTypes.ROCKET && (
-          <SpacecraftFetch url="/rockets" render={(data) => <RocketViewer rockets={data} />} />
+          <SpacecraftFetch url="/rockets" render={(data) => <RocketFeed rockets={data} />} />
         )}
         {selected === spacecraftTypes.DRAGON && (
-          <SpacecraftFetch url="/dragons" render={(data) => <DragonViewer dragons={data} />} />
+          <SpacecraftFetch url="/dragons" render={(data) => <DragonFeed dragons={data} />} />
         )}
       </div>
     </div>

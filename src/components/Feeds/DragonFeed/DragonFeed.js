@@ -1,9 +1,9 @@
 import React from 'react';
-import { Card } from '../Card';
+import { Card } from '../../Card';
 
-export function DragonViewer({ dragons }) {
+export function DragonFeed({ dragons }) {
   return (
-    <div data-qa="dragon-viewer" className="dragon-viewer">
+    <div data-qa="dragon-feed" className="dragon-feed">
       <h1 className="title">
         <span className="mx-2" role="img" aria-label="dragons">
           🛰

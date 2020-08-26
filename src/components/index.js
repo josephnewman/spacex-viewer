@@ -1,5 +1,4 @@
 export * from './SpacecraftFetch';
-export * from './RocketViewer';
-export * from './DragonViewer';
+export * from './Feeds';
 export * from './Modal';
 export * from './Card';

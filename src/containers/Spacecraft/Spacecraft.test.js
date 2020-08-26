@@ -38,8 +38,8 @@ describe('Spacecraft', () => {
       wrapper.update();
     });
 
-    test('should have rocket viewer by default', async () => {
-      expect(wrapper.find('[data-qa="rocket-viewer"]').exists()).toBe(true);
+    test('should have rocket list by default', async () => {
+      expect(wrapper.find('[data-qa="rocket-feed"]').exists()).toBe(true);
     });
 
     describe('when the user clicks on the dragons button', () => {
@@ -53,8 +53,8 @@ describe('Spacecraft', () => {
         wrapper.update();
       });
 
-      test('should render the dragon viewer', async () => {
-        expect(wrapper.find('[data-qa="dragon-viewer"]').exists()).toBe(true);
+      test('should render the dragon feed', async () => {
+        expect(wrapper.find('[data-qa="dragon-feed"]').exists()).toBe(true);
       });
     });
 
@@ -69,8 +69,8 @@ describe('Spacecraft', () => {
         wrapper.update();
       });
 
-      test('should render the dragon viewer', async () => {
-        expect(wrapper.find('[data-qa="rocket-viewer"]').exists()).toBe(true);
+      test('should render the dragon feed', async () => {
+        expect(wrapper.find('[data-qa="rocket-feed"]').exists()).toBe(true);
       });
     });
   });
