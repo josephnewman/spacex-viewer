@@ -58,6 +58,22 @@ describe('Spacecraft', () => {
       });
     });
 
+    describe('when the user clicks on the ships button', () => {
+      beforeEach(async () => {
+        await act(async () => {
+          await wrapper.find('[data-qa="ships-button"]').simulate('click');
+
+          await resolveApi({ data: [] });
+        });
+
+        wrapper.update();
+      });
+
+      test('should render the ship table', async () => {
+        expect(wrapper.find('[data-qa="ship-table"]').exists()).toBe(true);
+      });
+    });
+
     describe('when the user clicks on the rocket button', () => {
       beforeEach(async () => {
         await act(async () => {
