@@ -4,7 +4,7 @@ import classNames from 'classnames';
 export function Modal({ button, title, children }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  var modalClasses = classNames({
+  const modalClasses = classNames({
     modal: true,
     'is-active': isOpen,
   });
